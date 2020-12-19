@@ -1,8 +1,7 @@
 body {
     background: radial-gradient(#e5e5e5 , #fff , #e5e5e5);
-    
+ 
 }
-
 
 header {
     display: flex;
@@ -54,13 +53,28 @@ li{
     color: rgb(21, 255, 0);
     font-size: large;
     font-family:cursive;
-  
+
 
     
+}
+.navBar h1 {
+    position: relative;
+    animation-name: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+@keyframes heading {
+    
+    0% {opacity : 0 ;left: -200px;}
+    100%{opacity : 1;right: -30px;}
 }
 
 img{
     width: 100%;
+ 
 }
 
 .button{
@@ -74,11 +88,10 @@ img{
 }
 
 
-
 .container{
     display: flex;
     justify-content: space-between;
-    
+   
 }
 
 .Card{
@@ -167,7 +180,17 @@ button{
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+    opacity: 0;
     border-radius: 10px;
+    animation-name: btn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }
 
 button:hover{
